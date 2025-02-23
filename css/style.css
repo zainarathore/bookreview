@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: rgb(246, 246, 246);
+    color: white;
+    text-align: center;
+  }
+  
+  
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(17, 15, 15);
+  }
+  
+ 
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(245, 245, 248);
+    position: relative;
+  }
+  
+ 
+  .logo {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .hamburger-menu .line {
+    display: block;
+    background-color: rgb(10, 9, 9);
+    height: 3px;
+    width: 30px;
+    margin: 6px 0;
+  }
+  
+ 
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu-links .link {
+    color: rgb(6, 5, 5);
+    display: block;
+    padding: 10px;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+  
+ 
+    .menu-links {
+      display: flex;
+      position: static;
+      background: none;
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .menu-links .link {
+      color: rgb(21, 21, 21);
+    }
+  

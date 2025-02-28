@@ -35,22 +35,43 @@
     font-size: 1.5rem;
     color: white;
   }
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr; /* Skapar två lika stora kolumner */
+    grid-gap: 30px; /* Lägg till mer avstånd mellan kolumnerna */
+    align-items: center; /* Centrerar texten och bilden vertikalt */
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-gap: 50px; /* Ökar avståndet mellan bild och text */
+  
+}
 
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    z-index: 10;
+.text-box {
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(210, 206, 206, 0.7);
+    color: rgb(3, 3, 3);
+    border-radius: 10px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: flex-start; /* Flytta bilden till höger genom att placera den på högerkolumnen */
+    margin-right: 20px;
   }
-  
-  .hamburger-menu .line {
-    display: block;
-    background-color: rgb(10, 9, 9);
-    height: 3px;
-    width: 30px;
-    margin: 6px 0;
-  }
-  
- 
+
+
+.hero-img img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
   .menu-links {
     position: absolute;
     top: 60px;
@@ -90,3 +111,58 @@
       color: rgb(21, 21, 21);
     }
   
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+  }
+  
+  /* Stil för hamburgarens linjer */
+  .hamburger-menu .line {
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      transition: 0.3s;
+  }
+  
+  /* Navigationsmenyn styling */
+  .menu-links {
+      display: flex;
+      gap: 20px;
+  }
+  
+  /* Media query för när skärmen är hälften av datorns bredd (~960px för en 1920px skärm) */
+  @media screen and (max-width: 960px) {
+      .menu-links {
+          display: none; /* Döljer menyn som standard */
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background-color: rgba(0, 0, 0, 0.9);
+          width: 200px;
+          padding: 10px;
+          border-radius: 5px;
+      }
+  
+      /* Visar menyn i vertikal layout när den är aktiv */
+      .menu-links.show {
+          display: flex;
+      }
+  
+      /* Aktivera hamburgarmenyn */
+      .hamburger-menu {
+          display: flex;
+      }
+  
+      /* Justera länkar så att de är centrerade i menyn */
+      .menu-links a {
+          display: block;
+          padding: 10px;
+          text-align: center;
+          color: white;
+          text-decoration: none;
+      }
+  }

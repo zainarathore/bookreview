@@ -12,8 +12,6 @@
     text-align: center;
   }
   
-  
-
   a {
     text-transform: uppercase;
     text-decoration: none;
@@ -31,43 +29,41 @@
   }
   
  
-  .logo {
-    font-size: 1.5rem;
-    color: white;
-  }
   .hero-container {
     display: flex;
     justify-content: space-between;
-    grid-template-columns: 1fr 1fr; /* Skapar två lika stora kolumner */
-    grid-gap: 30px; /* Lägg till mer avstånd mellan kolumnerna */
-    align-items: center; /* Centrerar texten och bilden vertikalt */
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 50px; 
+    align-items: center; 
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    grid-gap: 50px; /* Ökar avståndet mellan bild och text */
-  
 }
 
 .text-box {
     max-width: 500px;
     padding: 20px;
-    background-color: rgba(210, 206, 206, 0.7);
+    background-color: rgba(231, 228, 228, 0.7);
     color: rgb(3, 3, 3);
     border-radius: 10px;
     text-align: left;
     margin-left: 20px;
 }
+.text-box li {
+  margin-bottom: 10px; /
+  line-height: 1.5; 
+}
 
 .hero-img {
     display: flex;
-    justify-content: flex-start; /* Flytta bilden till höger genom att placera den på högerkolumnen */
+    justify-content: flex-start; 
     margin-right: 20px;
   }
 
 
 .hero-img img {
-    width: 60%;
-    height: auto;
+    width: 550px;
+    height: 500px;
     border-radius: 10px;
 }
 
@@ -82,10 +78,11 @@
     flex-direction: column;
     gap: 10px;
     border-radius: 5px;
+    z-index: 10;
   }
   
   .menu-links .link {
-    color: rgb(6, 5, 5);
+    color: rgb(212, 196, 196);
     display: block;
     padding: 10px;
   }
@@ -98,7 +95,7 @@
     margin-bottom: 20px;
   }
   
- 
+  @media screen and (min-width: 961px) {
     .menu-links {
       display: flex;
       position: static;
@@ -108,61 +105,58 @@
     }
   
     .menu-links .link {
-      color: rgb(21, 21, 21);
+      color: rgb(9, 9, 9);
     }
   
     .hamburger-menu {
       display: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 10px;
+    
+    }
   }
-  
-  /* Stil för hamburgarens linjer */
-  .hamburger-menu .line {
-      width: 30px;
-      height: 3px;
-      background-color: black;
-      transition: 0.3s;
-  }
-  
-  /* Navigationsmenyn styling */
-  .menu-links {
-      display: flex;
-      gap: 20px;
-  }
-  
-  /* Media query för när skärmen är hälften av datorns bredd (~960px för en 1920px skärm) */
+
   @media screen and (max-width: 960px) {
       .menu-links {
-          display: none; /* Döljer menyn som standard */
+          display: none; 
           flex-direction: column;
           position: absolute;
-          top: 60px;
-          right: 20px;
+          top: 40px;
+          left: 10px;
           background-color: rgba(0, 0, 0, 0.9);
           width: 200px;
           padding: 10px;
           border-radius: 5px;
+          z-index: 10;
       }
   
-      /* Visar menyn i vertikal layout när den är aktiv */
+     
       .menu-links.show {
           display: flex;
       }
   
-      /* Aktivera hamburgarmenyn */
+     
       .hamburger-menu {
           display: flex;
+          cursor: pointer;
+          flex-direction: column;
+          gap: 5px;
+          padding: 10px;
+          z-index: 11;
       }
-  
-      /* Justera länkar så att de är centrerade i menyn */
+
+      .hamburger-menu .line {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(187, 144, 144);
+        transition: 0.3s;
+    }
+     
       .menu-links a {
           display: block;
           padding: 10px;
           text-align: center;
-          color: white;
+          color: rgb(243, 234, 234);
           text-decoration: none;
       }
+
+    
   }

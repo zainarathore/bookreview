@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.tittle:hover {
+    color: white;
+}
+
+.nav{
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+ }
+ 
+ .nav:hover {
+    color: white ;
+ }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card { 
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #b7aa9a;
+  overflow: hidden;
+  transition: transform 0.2s;
+  position: relative;
+  width: 300px;
+  height: 350px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+  justify-content: center; 
+  align-items: center;   
+  width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    
+  
+    
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #b7aa9a ;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration:underline;
+  color: rgb(17, 15, 15);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgb(245, 245, 248);
+  position: relative;
+}
+
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 50px; 
+  align-items: center; 
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-box {
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(231, 228, 228, 0.7);
+  color: rgb(3, 3, 3);
+  border-radius: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+.text-box li {
+margin-bottom: 10px; /
+line-height: 1.5; 
+}
+
+.hero-img {
+  display: flex;
+  justify-content: flex-start; 
+  margin-right: 20px;
+}
+
+
+.hero-img img {
+  width: 550px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+
+.menu-links {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.menu-links .link {
+  color: rgb(212, 196, 196);
+  display: block;
+  padding: 10px;
+}
+
+.show {
+  display: flex;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 961px) {
+  .menu-links {
+    display: flex;
+    position: static;
+    background: none;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .menu-links .link {
+    color: rgb(9, 9, 9);
+  }
+
+  .hamburger-menu {
+    display: none;
+  
+  }
+}
+
+@media screen and (max-width: 960px) {
+    .menu-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+   
+    .menu-links.show {
+        display: flex;
+    }
+
+   
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+        z-index: 11;
+    }
+
+    .hamburger-menu .line {
+      width: 30px;
+      height: 3px;
+      background-color: rgb(187, 144, 144);
+      transition: 0.3s;
+  }
+   
+    .menu-links a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: rgb(243, 234, 234);
+        text-decoration: none;
+    }
+
+}
+
+.footer {
+  background-color: #c5bbb8;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+} 

@@ -14,10 +14,14 @@
   
   a {
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(17, 15, 15);
   }
   
+  p { 
+    padding: 10px;
+
+  }
  
   .nav-wrapper {
     display: flex;
@@ -27,7 +31,7 @@
     background-color: rgb(245, 245, 248);
     position: relative;
   }
-  
+
  
   .hero-container {
     display: flex;
@@ -48,6 +52,7 @@
     border-radius: 10px;
     text-align: left;
     margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .text-box li {
   margin-bottom: 10px; /
@@ -91,10 +96,8 @@
     display: flex;
   }
 
-  p {
-    margin-bottom: 20px;
-  }
-  
+
+
   @media screen and (min-width: 961px) {
     .menu-links {
       display: flex;
@@ -160,3 +163,14 @@
 
     
   }
+
+  .footer {
+    background-color: #c5bbb8;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  } 
+  

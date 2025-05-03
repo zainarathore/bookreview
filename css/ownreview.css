@@ -87,7 +87,7 @@ input, textarea, button {
   }
   
   .menu-links .link {
-    color: rgb(212, 196, 196);
+    color: rgb(222, 209, 209);
     display: block;
     padding: 10px;
   }
@@ -110,7 +110,7 @@ input, textarea, button {
     }
   
     .menu-links .link {
-      color: rgb(239, 238, 238);
+      color: rgb(35, 34, 34);
     }
   
     .hamburger-menu {

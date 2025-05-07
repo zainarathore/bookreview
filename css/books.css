@@ -77,12 +77,6 @@
   background-color: rgb(84, 66, 66);
   transition: 0.3s;
 }
-.menu-links .link {
-  color: rgb(246, 246, 246);
-  display: block;
-  padding: 10px;
-  text-transform: capitalize;
-}
 
 @media screen and (min-width: 961px) {
   .hamburger-menu {

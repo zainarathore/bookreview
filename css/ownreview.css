@@ -92,10 +92,6 @@ input, textarea, button {
     padding: 10px;
   }
   
-  .show {
-    display: flex;
-  }
-  
   p {
     margin-bottom: 20px;
   }

@@ -83,79 +83,78 @@ input, textarea, button {
     display: block;
     padding: 10px;
   }
+
   
   p {
     margin-bottom: 20px;
   }
   
-  @media screen and (min-width: 961px) {
-    .menu-links {
-      display: flex;
-      position: static;
-      background: none;
-      flex-direction: row;
-      gap: 20px;
-    }
-  
-    .menu-links .link {
-      color: rgb(35, 34, 34);
-    }
-  
-    .hamburger-menu {
-      display: none;
+.menu-links {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+
+.menu-links.show {
+    display: flex;
     
-    }
+}
+
+
+.hamburger-menu {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  z-index: 11;
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(84, 66, 66);
+  transition: 0.3s;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: rgb(243, 234, 234);
+  text-decoration: none;
+}
+.container {
+  padding: 20px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 961px) {
+  .menu-links {
+    display: flex;
+    position: static;
+    background: none;
+    flex-direction: row;
+    gap: 20px;
   }
-  
-  @media screen and (max-width: 960px) {
-      .menu-links {
-          display: none; 
-          flex-direction: column;
-          position: absolute;
-          top: 40px;
-          left: 10px;
-          background-color: rgba(0, 0, 0, 0.9);
-          width: 200px;
-          padding: 10px;
-          border-radius: 5px;
-          z-index: 10;
-      }
-  
-     
-      .menu-links.show {
-          display: flex;
-      }
-  
-     
-      .hamburger-menu {
-          display: flex;
-          cursor: pointer;
-          flex-direction: column;
-          gap: 5px;
-          padding: 10px;
-          z-index: 11;
-      }
-  
-      .hamburger-menu .line {
-        width: 30px;
-        height: 3px;
-        background-color: rgb(84, 66, 66);
-        transition: 0.3s;
-    }
-     
-      .menu-links a {
-          display: block;
-          padding: 10px;
-          text-align: center;
-          color: rgb(243, 234, 234);
-          text-decoration: none;
-      }
-      .container {
-        padding: 20px;
-        margin: 0 10px;
-      }
+
+  .menu-links .link {
+    color: rgb(35, 34, 34);
+  }
+
+  .hamburger-menu {
+    display: none;
   
   }
+}
   
   .footer {
     background-color: #c5bbb8;
